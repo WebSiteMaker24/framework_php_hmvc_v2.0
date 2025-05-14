@@ -1,0 +1,25 @@
+🟥 Rouge
+🟧 Orange
+🟨 Jaune
+🟩 SECURITE
+🟢 Vert foncé
+🟦 Bleu clair
+🔵 Bleu foncé
+🟪 Violet
+🟫 Marron
+⬛ Noir
+⬜ Blanc
+🔴 Rouge plein
+🟠 Orange plein
+🟡 Jaune plein
+🟤 Marron clair
+⚫ Noir plein
+⚪ Blanc plein
+🧡 Cœur orange (pour l’affectif 🧡)
+💙 Cœur bleu
+💚 Cœur vert
+
+🔒 7. Headers de sécurité manquants
+Pas de Content-Security-Policy, X-Frame-Options, Strict-Transport-Security.
+
+➕ À gérer via .htaccess ou dans le index.php avec header().
