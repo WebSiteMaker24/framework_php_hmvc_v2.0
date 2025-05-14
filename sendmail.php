@@ -34,15 +34,15 @@ require '../phpmailer/SMTP.php';
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'riwal.prodhomme@gmail.com';
-        $mail->Password = 'ynms rlxo gxot nvln'; // Mot de passe d'application
+        $mail->Username = 'VOTRE EMAIL ICI';
+        $mail->Password = 'VOTRE CODE API ICI'; // Mot de passe d'application gmail
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('riwal.prodhomme@gmail.com', $name);
-        $mail->addAddress('riwal.prodhomme@gmail.com', 'WebSiteMaker'); // Adresse de destination
+        $mail->setFrom('VOTRE EMAIL ICI', $name);
+        $mail->addAddress('VOTRE EMAIL ICI', 'VOTRE NOM D'ENTREPRISE ICI'); // Adresse de destination
         $mail->isHTML(true);
-        $mail->Subject = "Nouveau message via WebSiteMaker";
+        $mail->Subject = "Nouveau message via VOTRE NOM D'ENTREPRISE ICI";
         
         $mail->Body = '
         <div style="width: 100%; background-color: #1B2E35; padding: 40px 0; font-family: Poppins, sans-serif;">
@@ -50,7 +50,7 @@ require '../phpmailer/SMTP.php';
                 
                 <!-- En-tête -->
                 <div style="background-color: #009C86; color: white; padding: 20px;">
-                    <h1 style="margin: 0; font-size: 24px;">WebSiteMaker</h1>
+                    <h1 style="margin: 0; font-size: 24px;">VOTRE NOM D'ENTREPRISE ICI</h1>
                     <p style="margin: 5px 0 0;">Votre web master en ligne</p>
                 </div>
         
@@ -65,14 +65,14 @@ require '../phpmailer/SMTP.php';
                 <!-- Pied -->
                 <div style="background-color: #f0f0f0; padding: 15px 20px; font-size: 13px; color: #333;">
                     <p style="margin: 10px 0;">📍 Ribérac 24600</p>
-                    <p style="margin: 10px 0;">📞 <a href="tel:0674274041" style="color: #009C86;">06 74 27 40 41</a></p>
-                    <p style="margin: 10px 0;">📧 <a href="mailto:contact@websitemaker.fr" style="color: #009C86;">contact@websitemaker.fr</a></p>
+                    <p style="margin: 10px 0;">📞 <a href="tel:VOTRE TEL ICI" style="color: #009C86;">VOTRE TEL ICI</a></p>
+                    <p style="margin: 10px 0;">📧 <a href="mailto:VOTRE MAIL ICI" style="color: #009C86;">VOTRE MAIL ICI</a></p>
                 </div>
             </div>
         
             <!-- Footer global -->
             <p style="text-align: center; font-size: 12px; color: #ccc; margin-top: 20px;">
-                Ce message a été généré automatiquement depuis <strong style="color: #00aaff;">WebSiteMaker.fr</strong>
+                Ce message a été généré automatiquement depuis <strong style="color: #00aaff;">VOTRE NOM D'ENTREPRISE ICI.fr</strong>
             </p>
         </div>';
         
