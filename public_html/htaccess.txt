@@ -1,0 +1,36 @@
+RewriteEngine On
+
+# Rediriger toutes les demandes HTTP vers HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# Réécrire l'URL pour supprimer l'extension PHP
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Réécrire l'URL pour les routes personnalisées
+RewriteRule ^accueil$ ?url=accueil [NC,L]
+RewriteRule ^accueil-uk$ ?url=accueil-uk [NC,L]
+RewriteRule ^accueil-es$ ?url=accueil-es [NC,L]
+RewriteRule ^autres-prestations$ ?url=autres-prestations [NC,L]
+RewriteRule ^nos-partenaires$ ?url=nos-partenaires [NC,L]
+RewriteRule ^contact$ ?url=contact [NC,L]
+
+
+# Forcer HTTPS 1 an sur tous les sous-domaines
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Protection contre le clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Protection contre type MIME sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Contrôle du referrer
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Politique des permissions navigateur
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+
