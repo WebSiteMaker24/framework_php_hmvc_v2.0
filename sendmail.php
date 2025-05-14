@@ -39,8 +39,8 @@ require '../phpmailer/SMTP.php';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('VOTRE EMAIL ICI', $name);
-        $mail->addAddress('VOTRE EMAIL ICI', 'VOTRE NOM D'ENTREPRISE ICI'); // Adresse de destination
+        $mail->setFrom("VOTRE EMAIL ICI", $name);
+        $mail->addAddress("VOTRE EMAIL ICI", "VOTRE NOM D'ENTREPRISE ICI"); // Adresse de destination
         $mail->isHTML(true);
         $mail->Subject = "Nouveau message via VOTRE NOM D'ENTREPRISE ICI";
         
@@ -50,7 +50,7 @@ require '../phpmailer/SMTP.php';
                 
                 <!-- En-tête -->
                 <div style="background-color: #009C86; color: white; padding: 20px;">
-                    <h1 style="margin: 0; font-size: 24px;">VOTRE NOM D'ENTREPRISE ICI</h1>
+                    <h1 style="margin: 0; font-size: 24px;">VOTRE NOM D ENTREPRISE ICI</h1>
                     <p style="margin: 5px 0 0;">Votre web master en ligne</p>
                 </div>
         
@@ -72,7 +72,7 @@ require '../phpmailer/SMTP.php';
         
             <!-- Footer global -->
             <p style="text-align: center; font-size: 12px; color: #ccc; margin-top: 20px;">
-                Ce message a été généré automatiquement depuis <strong style="color: #00aaff;">VOTRE NOM D'ENTREPRISE ICI.fr</strong>
+                Ce message a été généré automatiquement depuis <strong style="color: #00aaff;">VOTRE NOM D ENTREPRISE ICI</strong>
             </p>
         </div>';
         
