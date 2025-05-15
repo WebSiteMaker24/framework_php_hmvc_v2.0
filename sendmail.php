@@ -18,9 +18,9 @@ if (session_status() == PHP_SESSION_NONE) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../phpmailer/Exception.php';
-require '../phpmailer/PHPMailer.php';
-require '../phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
 
 // Récupération et nettoyage des données POST
 $name = trim($_POST['name'] ?? '');
